@@ -19,12 +19,6 @@ class Citygate::ApplicationController < ::ApplicationController
     @current_ability ||= Ability.new(current_user)
   end
 
-  # Change Devise's redirect after sign in url
-  # @param [Object] resource_or_scope Not used here
-  def stored_location_for(resource_or_scope)
-    root_url
-  end
-
   # Defines the omniauth prefix so that citygate can be
   # mounted in anywhere
   Devise.omniauth_path_prefix = "#{Citygate::Engine.mount_path}/users/auth".squeeze "/"
