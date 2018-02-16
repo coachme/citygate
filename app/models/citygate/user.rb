@@ -10,7 +10,7 @@ module Citygate
 
     # @!group Devise configurations
     devise :database_authenticatable, :registerable, :encryptable,
-      :recoverable, :rememberable, :trackable, :validatable, :confirmable, :omniauthable
+      :rememberable, :trackable, :validatable, :confirmable, :omniauthable
 
     devise  :encryptor => :sha1
     # @!endgroup
